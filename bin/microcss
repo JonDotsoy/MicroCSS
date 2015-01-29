@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+if (0) {
+
+}
+
+// dev test process 
+// process.argv.push(
+	// '--html-file=index.html',
+	// 'sd',
+// '')
+
+var cli = require('../src/cli.js')
+
+cli(process.argv)

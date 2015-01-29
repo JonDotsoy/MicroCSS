@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Hoja de estilo diseñada para provar MicroCSS */
+/*
+
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda soluta laborum, asperiores praesentium voluptates dolorum voluptate beatae adipisci cumque labore illo placeat rem modi. Dolores laboriosam deserunt amet soluta, vero?
+
+ */
+
+body {
+	font-size: .9em;
+}
+
+body {
+	background-color: #FDFDFD;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.content-text {
+	margin: auto;
+	width: 670px;
+	margin-top: 60px;
+	margin-bottom: 80px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: lighter;
+}
+
+h3,h4,h5,h6 {
+	font-weight: bold;
+}
+
+h1 {
+	margin-bottom: 10px;
+}
+
+h2 {
+	margin-bottom: 8px;
+}
+
+h3 {
+	margin-bottom: 6px;
+}
+
+h4, h5, h6 {
+	margin-bottom: 2px;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+p {
+	margin-bottom: 16px;
+	text-align: justify;
+	color: rgb(23, 23, 23);
+}
+
+p::before {
+	/*content: "\003c div\003e";*/
+}
+
+p::first-line {
+	padding-left: 20px;
+}
+
+p::first-letter {
+	font-family: 'Lobster', sans-serif;
+	font-size: 50px;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	padding-right: 20px;
+	margin-bottom: -10px;
+}
+
+
+.content-text img {
+	max-width: 100%;
+	/*box-shadow: 0px 2px 4px gray;*/
+}
+
+.content-text .marco {
+	position: relative;
+}
+.content-text .image {
+	margin: 0px;
+	padding: 0px;
+}
+.content-text .image .marco {
+	margin-bottom: 20px;
+}
+.content-text .image .marco::before {
+	/*background-color: red;*/
+	content: '';
+	position: absolute;
+	padding: 0px;
+	margin: 0px;
+	/*top: 0px;*/
+	left: 0px;
+	right: 0px;
+	bottom: 15px;
+ 	height: 0px; 
+	width: 95%;
+	height: 40px;
+	margin: auto;
+	border-radius: 100%;
+	z-index: -1;
+	box-shadow: 0px 30px 20px lightgrey;
+}
+
+/* Estilos para los objetos con la etiqueta H1 */
+h1 {
+	margin: 0
+}
+
+h1.titulo {
+	font-size: 2.4em;
+	color: #222;
+}
+
+div.content-false {
+	background-color: red;
+	padding-bottom: 10px;
+}
+
+div::before {
+	content: '';
+}
+
+.false {
+	background-color: red;
+	width: 200px;
+	height: 400px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding: 0px;
+	margin: auto;
+	position: absolute;
+}
+
+.empty {
+	/* Solo un Comentario */
+}
+
+/* Largo espacio entre lineas */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fin de largo espacio entre lineas */

@@ -1,0 +1,16 @@
+{
+  "name": "microcss",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Analizar el HTML y CSS creando un CSS que contenga solo componentes necesarios para el documento HTML.",
+  "main": "microcss",
+  "bin": "./bin/microcss",
+  "scripts": {
+    "test": "node ./bin/microcss -f fileFalse.html"
+  },
+  "author": "Jonathan Delgado Zamorano <jonad.correo@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "mime": "^1.2.11"
+  }
+}
