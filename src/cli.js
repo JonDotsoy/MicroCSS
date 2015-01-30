@@ -74,11 +74,9 @@ module.exports = function (args) {
 		var srcFileCSS = fs.readFileSync(fileCSS,'utf8')
 
 		var cssComponent = new decomposeCSS(srcFileCSS)
-		cssComponent.removeComment()
+		
 
-		console.log(cssComponent.createObject())
-
-
+		console.log(cssComponent.objectCSSElement)
 	}
 
 }
