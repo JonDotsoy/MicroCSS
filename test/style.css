@@ -27,8 +27,18 @@ body {
 	width: 670px;
 	margin-top: 60px;
 	margin-bottom: 80px;
-	padding-right: 10px;
-	padding-left: 10px;
+
+}
+
+@media (max-width: 670px) {
+	body {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.content-text {
+		width: 100%;
+		/*padding: 20px;*/
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -117,6 +127,12 @@ p::first-letter {
 	border-radius: 100%;
 	z-index: -1;
 	box-shadow: 0px 30px 20px lightgrey;
+}
+
+@media (min-width: 700px) {
+	.content-text {
+
+	}
 }
 
 /* Estilos para los objetos con la etiqueta H1 */

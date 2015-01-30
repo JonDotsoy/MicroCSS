@@ -2,7 +2,7 @@ var consoleControl = require('./components/consoleControl.js')
 var fs = require('fs')
 var mime = require('mime')
 
-var scanHTML = require('./../lib/scanFileHTML.js')
+var decomposeCSS = require('./../lib/decomposeCSS.js')
 
 module.exports = function (args) {
 	'use strict'
@@ -54,12 +54,13 @@ module.exports = function (args) {
 	var parameters = {
 		'file': types_.FileHTML,
 		'source-folder': types_.String,
-		'css-file': types_.String,
+		'file-css': types_.FileCSS,
 	}
 
 	var acronymsParameters = {
 		'f': 'file',
 		'p': 'source-folder',
+		'c': 'file-css',
 	}
 
 	var csl = consoleControl(args, {
@@ -68,8 +69,16 @@ module.exports = function (args) {
 		acronyms : acronymsParameters,
 	})
 
-	if (csl.file) {
-		console.log(new scanHTML(csl.file))
+	if (csl['file-css']) {
+		var fileCSS = csl['file-css']
+		var srcFileCSS = fs.readFileSync(fileCSS,'utf8')
+
+		var cssComponent = new decomposeCSS(srcFileCSS)
+		cssComponent.removeComment()
+
+		console.log(cssComponent.createObject())
+
+
 	}
 
 }
