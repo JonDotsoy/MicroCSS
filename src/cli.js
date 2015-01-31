@@ -1,8 +1,8 @@
-var consoleControl = require('./components/consoleControl.js')
+var consoleControl = require('./components/consoleControl')
 var fs = require('fs')
 var mime = require('mime')
 
-var decomposeCSS = require('./../lib/decomposeCSS.js')
+var scanTheCssSelectors = require('./../lib/scanTheCssSelectors')
 
 module.exports = function (args) {
 	'use strict'
@@ -73,10 +73,9 @@ module.exports = function (args) {
 		var fileCSS = csl['file-css']
 		var srcFileCSS = fs.readFileSync(fileCSS,'utf8')
 
-		var cssComponent = new decomposeCSS(srcFileCSS)
-		
+		var selectors = new scanTheCssSelectors(srcFileCSS)
 
-		console.log(cssComponent.objectCSSElement)
+		console.log(selectors.desconpos())
 	}
 
 }
